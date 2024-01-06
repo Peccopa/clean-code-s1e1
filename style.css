@@ -16,10 +16,10 @@
 .header .header-link {
   font-family: fantasy, cursive;
 }
-
 @media (max-width:768px) {
-.header { text-align: center;
-}
+  .header {
+    text-align: center;
+  }
 }
 .main {
   display: block;
@@ -90,13 +90,11 @@
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
-
   width: 226px
 }
 .task-input:focus {
   color: #333;
 }
-
 /* New Task */
 .additem-header {
   display: block;
@@ -105,9 +103,7 @@
 #new-task {
   width: 318px;
 }
-
 /* Task list */
-
 .list {
   overflow: hidden;
   padding: 20px 0;
@@ -127,7 +123,6 @@
   font-size: 18px;
   width: 226px;
 }
-
 .delete-btn-img {
   height: 2em;
   transform: rotateZ(45deg);
@@ -136,13 +131,11 @@
 .delete-btn-img:hover {
   transform: rotateZ(0);
 }
-
 /* Completed */
 .completed-section-list .task-label {
   text-decoration: line-through;
   color: #888;
 }
-
 /* Edit Task */
 .list .task-input {
   display:none
