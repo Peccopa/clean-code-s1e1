@@ -84,7 +84,7 @@ var editTask=function(){
 
   var listItem=this.parentNode;
 
-  var editInput=listItem.querySelector('input[type=text]');
+  var editInput=listItem.querySelector('.task-input');
   var label=listItem.querySelector("label");
   var editBtn=listItem.querySelector(".edit-btn");
   var containsClass=listItem.classList.contains("todo-section-edit");
@@ -136,6 +136,7 @@ var taskIncomplete=function(){
   //When the checkbox is unchecked
   //Append the task list item to the #incomplete-tasks.
   var listItem=this.parentNode;
+  listItem.classList.remove('completed-section-list');
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem,taskCompleted);
 }
