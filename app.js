@@ -124,6 +124,7 @@ var taskCompleted=function(){
   //Append the task list item to the #completed-tasks
   var listItem=this.parentNode;
   completedTasksHolder.appendChild(listItem);
+  listItem.classList.add('completed-section-list');
   bindTaskEvents(listItem, taskIncomplete);
 
 }
@@ -157,7 +158,7 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
   //select ListItems children
-  var checkBox=taskListItem.querySelector("input[type=checkbox]");
+  var checkBox=taskListItem.querySelector(".checkbox");
   var editButton=taskListItem.querySelector("button.edit-btn");
   var deleteButton=taskListItem.querySelector("button.delete-btn");
 
