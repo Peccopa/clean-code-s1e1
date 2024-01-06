@@ -37,14 +37,14 @@
 }
 .todo-block,
 .completed-section {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 .task-input,
 .todo-section-task-chekbox,
 .todo-section-edit-chekbox,
 .completed-section-checkbox {
-  outline:none;
+  outline: none;
 }
 .button {
   background: none;
@@ -54,7 +54,7 @@
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
-  outline:none;
+  outline: none;
 }
 .button:hover {
   color: #3a3A3a;
@@ -108,7 +108,7 @@
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-  list-style:none;
+  list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -138,12 +138,12 @@
 }
 /* Edit Task */
 .list .task-input {
-  display:none
+  display: none
 }
 .todo-section-edit .task-input {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 .todo-section-edit .task-label {
-  display:none;
+  display: none;
 }
