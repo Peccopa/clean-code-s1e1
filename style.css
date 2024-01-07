@@ -10,10 +10,10 @@
   display: block;
   text-align: right;
 }
-.header-img {
+.header__img {
   width: 100%;
 }
-.header .header-link {
+.header .header__link {
   font-family: fantasy, cursive;
 }
 @media (max-width:768px) {
@@ -32,21 +32,21 @@
   display: inline-block;
   flex-grow: 1;
 }
-.additem-block {
+.add-section__content {
   display: flex;
 }
-.todo-block,
-.completed-section {
+.todo-section__content,
+.complete-section__content {
   margin: 0;
   padding: 0px;
 }
 .task-input,
-.todo-section-task-chekbox,
-.todo-section-edit-chekbox,
-.completed-section-checkbox {
+.todo-section__task-chekbox,
+.todo-section__edit-chekbox,
+.complete-section__list-checkbox {
   outline: none;
 }
-.button {
+.task-button {
   background: none;
   border: 0px;
   color: #888;
@@ -56,12 +56,12 @@
   cursor: pointer;
   outline: none;
 }
-.button:hover {
+.task-button:hover {
   color: #3a3A3a;
 }
 /* Heading */
-.todo-header,
-.completed-header {
+.todo-section__header,
+.complete-section__header {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -70,7 +70,7 @@
   margin: 0;
   text-transform: uppercase;
 }
-.additem-header {
+.add-section__header {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -80,7 +80,7 @@
   display: block;
   margin: 0 0 20px;
 }
-.additem-section {
+.add-section {
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
@@ -103,7 +103,7 @@
   color: #333;
 }
 /* New Task */
-#new-task {
+.add-section__input {
   width: 318px;
 }
 /* Task list */
@@ -126,16 +126,16 @@
   font-size: 18px;
   width: 226px;
 }
-.delete-btn-img {
+.delete-btn__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.delete-btn-img:hover {
+.delete-btn__img:hover {
   transform: rotateZ(0);
 }
 /* Completed */
-.completed-section-list .task-label {
+.complete-section__list .task-label {
   text-decoration: line-through;
   color: #888;
 }
@@ -143,10 +143,10 @@
 .list .task-input {
   display: none;
 }
-.todo-section-edit .task-input {
+.todo-section__edit .task-input {
   display: inline-block;
   width: 224px;
 }
-.todo-section-edit .task-label {
+.todo-section__edit .task-label {
   display: none;
 }

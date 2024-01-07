@@ -8,10 +8,10 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.getElementById("new-task");//Add a new task.
+var taskInput=document.querySelector(".add-section__input");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("incomplete-tasks");//ul of #incomplete-tasks
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+var incompleteTaskHolder=document.querySelector(".todo-section__content");//ul of .todo-section__content
+var completedTasksHolder=document.querySelector(".complete-section__content");//completed-tasks
 
 
 //New task list item
@@ -31,7 +31,7 @@ var createNewTaskElement=function(taskString){
   //button.delete
   var deleteButton=document.createElement("button");//delete button
   var deleteButtonImg=document.createElement("img");//delete button image
-  deleteButtonImg.className='delete-btn-img';
+  deleteButtonImg.className='delete-btn__img';
 
   label.innerText=taskString;
   label.className='task-label';
@@ -43,9 +43,9 @@ var createNewTaskElement=function(taskString){
   editInput.className="task-input";
 
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className="edit-btn button";
+  editButton.className="edit-btn task-button";
 
-  deleteButton.className="delete-btn button";
+  deleteButton.className="delete-btn task-button";
   deleteButtonImg.src='./remove.svg';
   deleteButton.appendChild(deleteButtonImg);
 
@@ -63,7 +63,7 @@ var createNewTaskElement=function(taskString){
 
 var addTask=function(){
   console.log("Add Task...");
-  //Create a new list item with the text from the #new-task:
+  //Create a new list item with the text from the .add-section__input:
   if (!taskInput.value) return;
   var listItem=createNewTaskElement(taskInput.value);
 
@@ -87,11 +87,11 @@ var editTask=function(){
   var editInput=listItem.querySelector('.task-input');
   var label=listItem.querySelector("label");
   var editBtn=listItem.querySelector(".edit-btn");
-  var containsClass=listItem.classList.contains("todo-section-edit");
-  //If class of the parent is .todo-section-edit
+  var containsClass=listItem.classList.contains("todo-section__edit");
+  //If class of the parent is .todo-section__edit
   if(containsClass){
 
-    //switch to .todo-section-edit
+    //switch to .todo-section__edit
     //label becomes the inputs value.
     label.innerText=editInput.value;
     editBtn.innerText="Edit";
@@ -100,8 +100,8 @@ var editTask=function(){
     editBtn.innerText="Save";
   }
 
-  //toggle .todo-section-edit on the parent.
-  listItem.classList.toggle("todo-section-edit");
+  //toggle .todo-section__edit on the parent.
+  listItem.classList.toggle("todo-section__edit");
 };
 
 
@@ -121,10 +121,10 @@ var deleteTask=function(){
 var taskCompleted=function(){
   console.log("Complete Task...");
 
-  //Append the task list item to the #completed-tasks
+  //Append the task list item to the .complete-section__content
   var listItem=this.parentNode;
   completedTasksHolder.appendChild(listItem);
-  listItem.classList.add('completed-section-list');
+  listItem.classList.add('complete-section__list');
   bindTaskEvents(listItem, taskIncomplete);
 
 }
@@ -134,9 +134,9 @@ var taskIncomplete=function(){
   console.log("Incomplete Task...");
   //Mark task as incomplete.
   //When the checkbox is unchecked
-  //Append the task list item to the #incomplete-tasks.
+  //Append the task list item to the .todo-section__content.
   var listItem=this.parentNode;
-  listItem.classList.remove('completed-section-list');
+  listItem.classList.remove('complete-section__list');
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem,taskCompleted);
 }
