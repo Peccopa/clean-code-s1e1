@@ -11,3 +11,5 @@
     - Editing an item from the "COMPLETED" list
     - Setting an item to "Incomplete" status and moving it to the "TODO" list via checkbox
     - Animation on the delete button
+
+    //ESLINT TEST
