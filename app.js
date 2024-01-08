@@ -21,7 +21,7 @@ function createNewTaskElement(taskString) {
   // input (checkbox)
   const checkBox=doc.createElement('input');// checkbx
   // label
-  const label = doc.createElement('label');// label
+  const label= doc.createElement('label');// label
   // input (text)
   const editInput = doc.createElement('input');// text
   // button.edit
